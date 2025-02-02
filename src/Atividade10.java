@@ -24,6 +24,7 @@ public class Atividade10 {
         double lataDe18Litros = 18 * 6;
         double galaoDe36Litros = 3.6 * 6;
 
+
         System.out.println("Digite a largura da parede: ");
         largura = scanner.nextDouble();
 
@@ -33,12 +34,19 @@ public class Atividade10 {
         area = comprimento * largura;
         System.out.printf("A área total da parede é: %.2fm²\n", area);
 
-        double quantidadeDeLatas = area / lataDe18Litros;
-        double quantidadeDeGaloes = area / galaoDe36Litros;
+        int quantidadeDeLatas = (int) Math.ceil(area / lataDe18Litros);
+        int quantidadeDeGaloes = (int) Math.ceil(area / galaoDe36Litros);
         double precoLatas = 80.00;
         double precoGaloes = 25.00;
 
-        System.out.printf("Na situação de comprar apenas latas de 18 litros, precisará de: %.0f latas e pagará R$%.2f reais\nComprando apenas galões de 3,6 litros: %.0f galões e pagará R$%.2f reais", quantidadeDeLatas, quantidadeDeLatas * precoLatas, quantidadeDeGaloes, quantidadeDeGaloes * precoGaloes);
+        //Situação C
+        double litrosNecessarios = Math.ceil((area / 6) * 1.1);
+        int latasC = (int) (litrosNecessarios / 18);
+        double resto = litrosNecessarios % 18;
+        int galoesC = (int) Math.ceil(resto / 3.6);
+
+
+        System.out.printf("Na situação de comprar apenas latas de 18 litros, precisará de: %d latas e pagará R$%.2f reais\nComprando apenas galões de 3,6 litros: %d galões e pagará R$%.2f reais\nPor último, na situação C, ficará %d latas e %d galões, totalizando R$%.2f reais", quantidadeDeLatas, quantidadeDeLatas * precoLatas, quantidadeDeGaloes, quantidadeDeGaloes * precoGaloes, latasC, galoesC, (latasC * precoLatas) + (galoesC * precoGaloes));
 
     }
 }
