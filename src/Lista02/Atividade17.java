@@ -47,7 +47,7 @@ public class Atividade17 {
             System.out.printf("O preço 5 (R$%.2f reais) está acima da média (%.2f reais).\n", preco5, media);
             acima = true;
         }
-        if (acima == false) {
+        if (!acima) {
             System.out.printf("Nenhum preço está acima da média (%.2f reais).", media);
         }
     }
