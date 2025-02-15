@@ -27,7 +27,7 @@ public class Atividade21 {
         System.out.println("Digite o ano: ");
         ano = sc.nextInt();
 
-        if (ano % 4 == 0 && ano % 100 != 0 || ano % 400 == 0) {
+        if ((ano % 4 == 0 && ano % 100 != 0) || (ano % 400 == 0)) {
             System.out.printf("O ano %d é bissexto.", ano);
         } else {
             System.out.printf("O ano %d não é bissexto.", ano);

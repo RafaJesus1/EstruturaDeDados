@@ -19,9 +19,11 @@ public class Atividade13 {
         System.out.println("Jogador 2, quantos dedos tem? ");
         dedosJogador2 = scanner.nextInt();
 
-        if ((dedosJogador1 + dedosJogador2) % 2 == 0 && dedosJogador2 + dedosJogador1 <= 10) {
+        int somaDedos = dedosJogador1 + dedosJogador2;
+
+        if ((somaDedos) % 2 == 0 && somaDedos <= 10) {
             System.out.print("Par!");
-        } else if ((dedosJogador1 + dedosJogador2) % 2 != 0 && dedosJogador2 + dedosJogador1 <= 10) {
+        } else if ((somaDedos) % 2 != 0 && somaDedos <= 10) {
             System.out.print("Ímpar!");
         } else {
             System.out.print("Limite de dedos excedido! Tentem novamente.");
