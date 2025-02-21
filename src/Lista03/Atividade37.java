@@ -34,7 +34,7 @@ public class Atividade37 {
         pesoMedio = pesoTotal / qntdBagagens;
         double precoMedio = pesoMedio * precoPorQuilo;
 
-        System.out.printf("O peso médio das bagagens: %.2f\nO preço será: R$%.2f reais.", pesoMedio, precoMedio);
+        System.out.printf("O peso médio das bagagens: %.2f kg\nO preço será: R$%.2f reais.", pesoMedio, precoMedio);
 
     }
 }

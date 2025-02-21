@@ -16,14 +16,15 @@ public class Atividade34 {
         double media = 0;
 
         do {
-            for (int i = 1; i < notasBimestre; i++) {
+            for (int i = 0; i < notasBimestre; i++) {
                 System.out.printf("Digite a %d° nota do aluno: ", i + 1);
                 notas = sc.nextDouble();
                 notas /= notasBimestre;
                 media += notas;
         }
-            System.out.printf("Média do %d° aluno: %.2f\n", qntdAluno, media);
+            System.out.printf("Média do %d° aluno: %.2f\n\n", qntdAluno, media);
+            media = 0;
             qntdAluno++;
-        } while (qntdAluno < 25);
+        } while (qntdAluno <= 25);
     }
 }
